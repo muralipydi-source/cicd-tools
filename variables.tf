@@ -17,3 +17,8 @@ variable "zone_id" {
   default     = "Z01602722QJVZMCD67LWU"
   description = "description"
 }
+
+variable "ami_id" {
+  default = "ami-09c813fb71547fc4f"
+
+}
