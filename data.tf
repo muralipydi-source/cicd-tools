@@ -1,4 +1,4 @@
-
+/* 
 data "aws_ami" "joindevops" {
 
     most_recent = true
@@ -19,3 +19,4 @@ data "aws_ami" "joindevops" {
         values = ["hvm"]
     }
 }
+ */
