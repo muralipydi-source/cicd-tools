@@ -40,19 +40,22 @@ sudo xfs_growfs /var
 sudo xfs_growfs /var/tmp
 
 ### Jenkins Installation ###
-sudo curl -o /etc/yum.repos.d/jenkins.repo \
+sudo rm -f /etc/yum.repos.d/jenkins.repo
+
+sudo curl -L -o /etc/yum.repos.d/jenkins.repo \
 https://pkg.jenkins.io/redhat-stable/jenkins.repo
 
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 
-# Jenkins requires Java
-sudo yum install -y fontconfig java-21-openjdk
+sudo yum clean all
+sudo yum makecache
+sudo yum install -y fontconfig java-17-openjdk
 
 sudo yum install -y jenkins
-
 sudo systemctl daemon-reload
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
+sudo systemctl status jenkins
 
 # df -h
 # lsblk
