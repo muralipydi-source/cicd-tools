@@ -39,3 +39,4 @@ sudo systemctl status jenkins
 # lsblk
 # lvs
 # systemctl status jenkins
+#jenkins --version

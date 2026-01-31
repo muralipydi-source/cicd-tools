@@ -58,7 +58,7 @@ helm version
 # lsblk
 # vgs
 # lvs
-# docker version
-# terraform version
+# docker --version
+# terraform --version
 # node -v
 # helm version
