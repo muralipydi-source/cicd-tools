@@ -46,7 +46,7 @@
 # ./get_helm.sh
 
 #!/bin/bash
-set -e
+#set -e
 
 ### Resize disk from 20GB to 50GB ###
 sudo growpart /dev/nvme0n1 4
