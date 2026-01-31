@@ -49,7 +49,7 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 
 sudo yum clean all
 sudo yum makecache
-sudo yum install -y fontconfig java-17-openjdk
+sudo yum install -y fontconfig java-21-openjdk
 
 sudo yum install -y jenkins
 sudo systemctl daemon-reload
