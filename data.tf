@@ -1,4 +1,3 @@
-/* 
 data "aws_ami" "joindevops" {
 
     most_recent = true
@@ -6,7 +5,7 @@ data "aws_ami" "joindevops" {
 
     filter {
         name   = "name"
-        values = ["RHEL-9-DevOps-Practice"]
+        values = ["Redhat-9-DevOps-Practice"]   ################RHEL-9-DevOps-Practice#########
     }
 
     filter {
@@ -21,7 +20,7 @@ data "aws_ami" "joindevops" {
 
     filter {
     name   = "id"
-    values = ["ami-09c813fb71547fc4f"]
+    values = ["ami-0220d79f3f480ecf5"]   #####  ami-0220d79f3f480ecf5 ami-09c813fb71547fc4f#####
   }
 
   filter {
@@ -44,4 +43,3 @@ data "aws_ami" "joindevops" {
     values = ["x86_64"]
   }
 }
- */
