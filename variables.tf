@@ -14,7 +14,7 @@ variable "zone_name" {
 
 variable "zone_id" {
   type        = string
-  default     = "Z01602722QJVZMCD67LWU"
+  default     = "Z02046772T5LD5LI0QG6T"   ## Z02046772T5LD5LI0QG6T Z01602722QJVZMCD67LWU####
   description = "description"
 }
 
