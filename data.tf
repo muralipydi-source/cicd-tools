@@ -1,41 +1,66 @@
+# data "aws_ami" "joindevops" {
+
+#     most_recent = true
+#     owners = ["973714476881"]  #898080060887 973714476881
+
+#     filter {
+#         name   = "name"
+#         values = ["Redhat-9-DevOps-Practice"]   ################RHEL-9-DevOps-Practice#########
+#     }
+
+#     filter {
+#         name   = "root-device-type"
+#         values = ["ebs"]
+#     }
+
+#     filter {
+#         name   = "virtualization-type"
+#         values = ["hvm"]
+#     }
+
+#     filter {
+#     name   = "id"
+#     values = ["ami-0220d79f3f480ecf5"]   #####  ami-0220d79f3f480ecf5 ami-09c813fb71547fc4f#####
+#   }
+
+#   filter {
+#     name   = "AMI name"
+#     values = ["RHEL-9-DevOps-Practice"]
+#   }
+
+#   filter {
+#     name   = "Platform details"
+#     values = ["Red Hat Enterprise Linux"]
+#   }
+
+#   filter {
+#     name   = "Image type"
+#     values = ["machine"]
+#   }
+
+#   filter {
+#     name   = "architecture"
+#     values = ["x86_64"]
+#   }
+# }
+
 data "aws_ami" "joindevops" {
+  most_recent = true
+  owners      = ["973714476881"]
 
-    most_recent = true
-    owners = ["973714476881"]  #898080060887 973714476881
-
-    filter {
-        name   = "name"
-        values = ["Redhat-9-DevOps-Practice"]   ################RHEL-9-DevOps-Practice#########
-    }
-
-    filter {
-        name   = "root-device-type"
-        values = ["ebs"]
-    }
-
-    filter {
-        name   = "virtualization-type"
-        values = ["hvm"]
-    }
-
-    filter {
-    name   = "id"
-    values = ["ami-0220d79f3f480ecf5"]   #####  ami-0220d79f3f480ecf5 ami-09c813fb71547fc4f#####
+  filter {
+    name   = "name"
+    values = ["Redhat-9-DevOps-Practice"]
   }
 
   filter {
-    name   = "AMI name"
-    values = ["RHEL-9-DevOps-Practice"]
+    name   = "root-device-type"
+    values = ["ebs"]
   }
 
   filter {
-    name   = "Platform details"
-    values = ["Red Hat Enterprise Linux"]
-  }
-
-  filter {
-    name   = "Image type"
-    values = ["machine"]
+    name   = "virtualization-type"
+    values = ["hvm"]
   }
 
   filter {
