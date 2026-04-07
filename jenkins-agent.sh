@@ -1,22 +1,22 @@
 #!/bin/bash
-# Resize disk from 20GB to 100GB ###
+# Resize disk from 20GB to 50GB ###
 sudo growpart /dev/nvme0n1 4
 
 # Resize Physical Volume
 sudo pvresize /dev/nvme0n1p4
 
 # Extend Logical Volumes
-sudo lvextend -L +20G /dev/RootVG/rootVol
+sudo lvextend -L +5G /dev/RootVG/rootVol
 #sudo lvextend -L +10G /dev/RootVG/swapVol
-sudo lvextend -L +30G /dev/RootVG/homeVol
-sudo lvextend -L +30G /dev/RootVG/varVol
+sudo lvextend -L +10G /dev/RootVG/homeVol
+sudo lvextend -L +10G /dev/RootVG/varVol
 sudo lvextend -l +100%FREE /dev/RootVG/varTmpVol
 
 # Grow filesystems (XFS)
 sudo xfs_growfs /
 sudo xfs_growfs /home
 sudo xfs_growfs /var
-sudo xfs_growfs /var/tmp
+#sudo xfs_growfs /var/tmp
 
 
 # Java Installation ###
